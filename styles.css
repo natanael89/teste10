@@ -1,0 +1,231 @@
+/*
+.seletor {
+    [posicionamento]
+    [tamanho]
+    [espaçamentos]
+    [fonte e propriedades de texto]
+    [plano de fundo]
+    [bordas]
+    [outros]
+
+Propriedades do layout (position, float, clear, display)
+Propriedades de modelagem (width, height, margin, padding)
+Propriedades visuais (color, background, border, box-shadow)
+Propriedades tipográficas (font-size, font-family, text-align, text-transform)
+Outras propriedades (cursor, overflow, z-index)
+}
+
+*/
+.container {
+    /* [posicionamento] */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* [tamanho] */
+    width: 1024px;
+    height: 100%;
+    /* [cores]*/
+    background-color: dimgray;
+    color: white;
+    border-radius: 0px;
+    box-shadow: 30px 30px 60px rgb(202, 115, 115), -30px -30px 60px rgb(190, 28, 28);
+    /* [fonte e propriedades de texto] */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    
+}
+
+.header {
+    /* [posicionamento] */
+    display: block;
+    margin: auto;
+}
+
+.main {
+    /* [posicionamento] */
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    /* tamanho */
+    width: 90%;
+    
+}
+
+.sectionForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 10px  auto 10px auto;
+    padding: 12px;
+
+    
+}
+
+
+.inputNome {
+    
+
+    width: 20rem;
+    height: 2rem;
+
+    /* [fonte e propriedades de texto] */
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+.inputNota {
+    /* [posicionamento] */
+    
+    /* tamanho */
+    width: 3rem;
+    height: 2rem;
+
+    /* [fonte e propriedades de texto] */
+    font-size: 18px;
+    text-align: center;
+    
+}
+
+
+.labelNome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.labelNumero {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.nota {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.sectionTable {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.sectionNome {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    border: 1px solid;
+    margin: auto;
+}
+
+th {
+    border: 1px solid;
+    padding: 14px;
+
+    width: 10rem;
+}
+
+td {
+    border: 1px solid;
+    padding: 14px;
+
+    /* [fonte e propriedades de texto] */
+    text-align: center;
+}
+
+.labelBut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 25px auto 3px auto;
+    padding: 1px;
+    
+}
+
+.boletimBut {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    width: 10rem;
+    height: 2.5rem;
+
+    /* Propriedades visuais */
+    background-color: rgb(15, 109, 109);
+    box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    border: none;
+
+    /* [fonte e propriedades de texto] */
+    font-size: 20px;
+
+    /* [outros] */
+    overflow: hidden;
+
+   
+}
+
+.boletimBut::after {
+        contain: "";
+        width: 0%;
+        height: 100%;
+        background: #dcbb13;
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+}
+
+.boletimBut:hover::after{
+    &::after{
+        contain: "";
+        width: 0%;
+        height: 100%;
+        background: #e4dbae;
+        position: absolute;
+        transition: all 0.4s ease-in-out;
+        right: 0;
+    }
+}
+
+.boletimBut span {
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    padding: 18px 25px;
+    color: #fff;
+    font-size: 1.125em;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    z-index: 20;
+    transition: all 0.3s ease-in-out;
+}
+
+.boletimBut:hover span {
+    color: #141212;
+    animation: scaleUp 0.3s ease-in-out;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

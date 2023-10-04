@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Boletim</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>Boletim Escolar</h1>
+        </header>
+        <main class="main">
+            <section class="sectionForm">
+                <form action="">
+                    <div class="labelNome">
+                        <label for="nomeDoAluno">Nome do Aluno</label>
+                        <input class="inputNome" type="text" id="nomeDoAluno">
+                   </div>
+
+                   <div>
+                    <h3>Disciplina</h3>
+                    <select name="disciplina" id="disciplina">
+                        <option selected></option>
+                        <option value="PORTUGUÊS">PORTUGUÊS</option>
+                        <option value="MATEMÁTICA">MATEMÁTICA</option>
+                        <option value="HISTÓRIA">HISTÓRIA</option>
+                        <option value="GEOGRAFIA">GEOGRAFIA</option>
+                        <option value="QUÍMICA">QUÍMICA</option>
+                        <option value="BIOLOGIA">BIOLOGIA</option>
+                        <option value="FÍSICO">FÍSICO</option>
+                        <option value="ED FÍSICA">ED FÍSICA</option>
+                        <option value="ARTES">ARTES</option>
+                        <option value="INGLÊS">INGLÊS</option>
+                    </select>
+                </div>
+                  
+                   <div class="labelNumero">
+                       <div class="nota">
+                           <label for="notaUm">Nota 1</label>
+                           <input class="inputNota" type="number" name="number" id="notaUm">
+                       </div>
+                       <div class="nota">
+                           <label for="notaDois">Nota 2</label>
+                           <input class="inputNota" type="number" name="number" id="notaDois">
+                       </div><div class="nota">
+                           <label for="notaTreis">Nota 3</label>
+                           <input class="inputNota" type="number" name="number" id="notaTreis">
+                       </div><div class="nota">
+                           <label for="notaQuatro">Nota 4</label>
+                           <input class="inputNota" type="number" name="number" id="notaQuatro">
+                       </div>              
+                   </div>
+                </form>
+               
+                <div class="labelBut">
+                    <button class="boletimBut" id="consulta">
+                    <span> Salva</span>   
+                    </button>
+                </div>  
+            </section>
+            <section class="sectionTable">
+                <div class="sectionNome">
+                    <span>Aluno:</span>
+                    <span id="aluno"></span>
+                </div>
+                <div class="tabelaBoletim">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Disciplina</th>
+                                <th>Nota 1</th>
+                                <th>Nota 2</th>
+                                <th>Nota 3</th>
+                                <th>Nota 4</th>
+                                <th>Média</th>
+                                <th>Situação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultadoBoletim">
+                            <tr>
+                                
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="./index.js" defer></script>
+</body>
+</html>
